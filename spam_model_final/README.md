@@ -7,12 +7,12 @@ Bu proje, **BERT (Turkish Cased)** mimarisi kullanılarak metin tabanlı mesajla
 Modelin başarısı, karmaşıklık matrisi (confusion matrix) ve sınıflandırma raporları ile doğrulanmıştır. 
 
 ### 1. Türkçe Veri Seti Analizi
-![Türkçe Veri Sonucu](türkce_veri_sonucu.png)
+![Türkçe Veri Sonucu](turkce_veri_analizi.png)
 *   **Doğruluk (Accuracy):** %86
 *   **Analiz:** Model, Türkçe karakter yapısına (Turkish-Cased) duyarlı olduğu için yerel SMS kalıplarında yüksek başarı sergilemiştir.
 
 ### 2. İngilizce (Global) Veri Seti Analizi
-![İngilizce Veri Sonucu](ingilizce_veri_sonucu.png)
+![İngilizce Veri Sonucu](ingilizce_veri_analizi.png)
 *   **Doğruluk (Accuracy):** %82
 *   **Analiz:** Modelin farklı dillerdeki genel spam karakteristiğini anlama kapasitesi ölçülmüştür.
 
@@ -38,9 +38,9 @@ Modeli çalıştırmak için:
 
 ## 📂 Proje Yapısı
 ```text
-├── spam_model_final/       # Model konfigürasyon ve ağırlık klasörü
-├── dataset/                # Eğitim ve test için kullanılan veri setleri
-├── projenin_kodlari.ipynb  # Model eğitim ve test kodları (Jupyter Notebook)
-├── türkce_veri_sonucu.png  # Türkçe başarı metriği görseli
-├── ingilizce_veri_sonucu.png # İngilizce başarı metriği görseli
+├── spam_model_final/       # Model konfigürasyon dosyaları
+├── dataset/                # Eğitim ve test veri setleri
+├── projenin_kodlari.ipynb  # Ana çalışma dosyası
+├── turkce_veri_analizi.png  # Türkçe başarı metriği görseli
+├── ingilizce_veri_analizi.png # İngilizce başarı metriği görseli
 └── README.md               # Proje dokümantasyonu
