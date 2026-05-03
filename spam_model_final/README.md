@@ -13,7 +13,7 @@ Modelimiz özellikle Türkçe spam mesajları yakalamada üstün bir performans 
 *   **Güvenli Mesaj Koruması:** Gerçek mesajları spam olarak işaretleme hatası (False Positive) minimum düzeyde tutulmuştur.
 
 ### 2. İngilizce Veri Seti Sonuçları
-![İngilizce Veri Seti Analizi](Screenshot_19_2.png)
+![İngilizce Veri Seti Analizi](İngilizce_Veri_Sonucu.png)
 *   **Doğruluk (Accuracy): %82**
 *   **Analiz:** Modelin global metinlerdeki genel karakteristiğini ölçmek için kullanılmıştır.
 
