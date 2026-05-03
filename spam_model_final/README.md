@@ -7,7 +7,7 @@ Bu proje, **BERT (Turkish Cased)** mimarisi kullanılarak metin tabanlı mesajla
 Modelimiz özellikle Türkçe spam mesajları yakalamada üstün bir performans sergilemiştir.
 
 ### 1. Türkçe Veri Seti Sonuçları (En Yüksek Başarı)
-![Türkçe Veri Seti Analizi](Screenshot_20_2.png)
+![Türkçe Veri Seti Analizi](Türkçe_Veri_Sonucu.png)
 *   **Spam Yakalama Oranı (Recall): %98**
 *   **Analiz:** 747 adet gerçek spam mesajın **730 tanesi** model tarafından doğru tespit edilmiştir. 
 *   **Güvenli Mesaj Koruması:** Gerçek mesajları spam olarak işaretleme hatası (False Positive) minimum düzeyde tutulmuştur.
