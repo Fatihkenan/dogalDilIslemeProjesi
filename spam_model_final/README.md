@@ -1,35 +1,46 @@
-# 🛡️ BERT ile Türkçe Spam Mesaj Algılama (SMS)
+# 🛡️ BERT ile Türkçe ve İngilizce Spam Mesaj Algılama (SMS)
 
-Bu proje, **BERT (Turkish Cased)** mimarisi kullanılarak metin tabanlı mesajların "Güvenli (Ham)" veya "Spam" olarak sınıflandırılması amacıyla geliştirilmiştir. Proje kapsamında modelimiz hem global İngilizce veri setleri hem de kapsamlı Türkçe SMS veri setleri üzerinde test edilmiştir.
+Bu proje, **BERT (Turkish Cased)** mimarisi kullanılarak metin tabanlı mesajların "Güvenli (Ham)" veya "Spam" olarak sınıflandırılması amacıyla geliştirilmiştir. Proje, hem yerel Türkçe SMS veri setleri hem de global İngilizce veri setleri üzerinde test edilerek çok dilli başarı performansı ölçülmüştür.
 
-## 📊 Başarı Metrikleri ve Analiz
+## 📊 Performans ve Test Sonuçları
 
-Modelimiz özellikle Türkçe spam mesajları yakalamada üstün bir performans sergilemiştir.
+Modelin başarısı, karmaşıklık matrisi (confusion matrix) ve sınıflandırma raporları ile doğrulanmıştır. 
 
-### 1. Türkçe Veri Seti Sonuçları (En Yüksek Başarı)
-![Türkçe Veri Seti Analizi](Türkçe_Veri_Sonucu.png)
-*   **Spam Yakalama Oranı (Recall): %98**
-*   **Analiz:** 747 adet gerçek spam mesajın **730 tanesi** model tarafından doğru tespit edilmiştir. 
-*   **Güvenli Mesaj Koruması:** Gerçek mesajları spam olarak işaretleme hatası (False Positive) minimum düzeyde tutulmuştur.
+### 1. Türkçe Veri Seti Analizi
+![Türkçe Veri Sonucu](türkce_veri_sonucu.png)
+*   **Doğruluk (Accuracy):** %86
+*   **Analiz:** Model, Türkçe karakter yapısına (Turkish-Cased) duyarlı olduğu için yerel SMS kalıplarında yüksek başarı sergilemiştir.
 
-### 2. İngilizce Veri Seti Sonuçları
-![İngilizce Veri Seti Analizi](İngilizce_Veri_Sonucu.png)
-*   **Doğruluk (Accuracy): %82**
-*   **Analiz:** Modelin global metinlerdeki genel karakteristiğini ölçmek için kullanılmıştır.
+### 2. İngilizce (Global) Veri Seti Analizi
+![İngilizce Veri Sonucu](ingilizce_veri_sonucu.png)
+*   **Doğruluk (Accuracy):** %82
+*   **Analiz:** Modelin farklı dillerdeki genel spam karakteristiğini anlama kapasitesi ölçülmüştür.
 
 ---
 
-## 🚀 Model Dosyalarına Erişim
+## 🚀 Kurulum ve Kullanım
 
-GitHub dosya boyutu limitleri (25MB+) nedeniyle ana ağırlık dosyası (`model.safetensors`) harici olarak tutulmaktadır. 
+### ⚠️ Önemli: Model Ağırlıkları
+GitHub'ın dosya boyutu limitleri (25MB+) nedeniyle, modelin ana ağırlık dosyası olan **`model.safetensors`** (yaklaşık 442MB) bu depoda yer almamaktadır. 
 
-1.  `spam_model_final` klasöründeki yardımcı dosyaları indirin.
-2.  Aşağıdaki linkten ana model dosyasını indirip aynı klasöre yerleştirin:
-       🔗 [Model Ağırlıklarını İndir]([LİNKİ_BURAYA_YAPISTIR](https://drive.google.com/file/d/1tVSFfuttv-ChKdvGP_EgqZqODUiZ5yTZ/view?usp=drive_link)
+Modeli çalıştırmak için:
+1.  Bu depodaki tüm dosyaları indirin.
+2.  Aşağıdaki Google Drive linkinden ana model dosyasını indirin:
+    *   🔗 **[Model Ağırlıklarını İndir ((https://drive.google.com/file/d/1tVSFfuttv-ChKdvGP_EgqZqODUiZ5yTZ/view?usp=drive_link))]**
+3.  İndirdiğiniz `model.safetensors` dosyasını `spam_model_final/` klasörünün içine yerleştirin.
 
-## 🛠️ Teknik Özellikler
+### Teknik Özellikler
 *   **Mimari:** BERT-base-turkish-cased
-*   **Kapasite:** 512 Token (Ortalama 400-500 kelimeye kadar yüksek performans)
-*   **Kütüphaneler:** Transformers, PyTorch, Scikit-learn, Pandas
+*   **Giriş Limiti:** 512 Token (Ortalama 400-500 kelimeye kadar tam metin analizi sağlar).
+*   **Kütüphaneler:** Transformers, PyTorch, Pandas, Scikit-learn.
 
+---
 
+## 📂 Proje Yapısı
+```text
+├── spam_model_final/       # Model konfigürasyon ve ağırlık klasörü
+├── dataset/                # Eğitim ve test için kullanılan veri setleri
+├── projenin_kodlari.ipynb  # Model eğitim ve test kodları (Jupyter Notebook)
+├── türkce_veri_sonucu.png  # Türkçe başarı metriği görseli
+├── ingilizce_veri_sonucu.png # İngilizce başarı metriği görseli
+└── README.md               # Proje dokümantasyonu
