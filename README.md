@@ -24,5 +24,5 @@ Modelin başarısı, karmaşıklık matrisi (confusion matrix) ve sınıflandır
 GitHub dosya boyutu limitleri nedeniyle, modelin ana ağırlık dosyası (`model.safetensors`) bu depoda yer almamaktadır. 
 
 1. Aşağıdaki linkten ana model dosyasını indirin:
-    *   🔗 **[Model Ağırlıklarını İndir ((https://drive.google.com/file/d/1tVSFfuttv-ChKdvGP_EgqZqODUiZ5yTZ/view?usp=drive_link))]**
+    *   🔗 **[Model Ağırlıklarını İndir (https://drive.google.com/file/d/1tVSFfuttv-ChKdvGP_EgqZqODUiZ5yTZ/view?usp=drive_link)]**
 2. İndirdiğiniz dosyayı `spam_model_final/` klasörünün içine yerleştirin.
