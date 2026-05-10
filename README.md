@@ -27,4 +27,5 @@ GitHub dosya boyutu limitleri nedeniyle, modelin ana ağırlık dosyası (`model
     *   🔗 **[Model Ağırlıklarını İndir (https://drive.google.com/file/d/1tVSFfuttv-ChKdvGP_EgqZqODUiZ5yTZ/view?usp=drive_link)]**
 2. İndirdiğiniz dosyayı `spam_model_final/` klasörünün içine yerleştirin.
 3. ARAYÜZ 
-<img width="887" height="746" alt="resim" src="https://github.com/user-attachments/assets/b6d3eb31-4c82-4200-bc20-2f0baad8949e" />
+<img width="887" height="746" alt="Ekran görüntüsü 2026-05-10 221440" src="https://github.com/user-attachments/assets/e2348390-1b83-4ace-8369-9fa0aa68cf84" />
+
