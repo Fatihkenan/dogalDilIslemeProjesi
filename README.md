@@ -1,5 +1,7 @@
 # 🛡️ BERT ile Türkçe ve İngilizce Spam Mesaj Algılama (SMS)
 
+huggingface canlı link:https://huggingface.co/spaces/fkenan25/GuvenliMesaj-Bot
+
 Bu proje, **BERT (Turkish Cased)** mimarisi kullanılarak metin tabanlı mesajların "Güvenli (Ham)" veya "Spam" olarak sınıflandırılması amacıyla geliştirilmiştir.
 
 ## 📊 Performans ve Test Sonuçları
